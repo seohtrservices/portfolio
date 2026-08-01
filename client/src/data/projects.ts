@@ -2,9 +2,9 @@ export const projects = [
   {
     title: "Google Business Profile",
 
-    project_name: "Modify A Car",
+    project_name: "",
 
-    image: "/projects/modifyacar.webp",
+    image: "/images/modifyacar.jpg",
 
     description:
       "Managed Google Business Profile, Local SEO, keyword optimization, website SEO, and Google Maps rankings for an automotive business.",
@@ -25,18 +25,12 @@ export const projects = [
 
     project_name: "Auto Mechanic HTR Garage",
 
-    image: "/projects/htr.webp",
+    image: "/images/htrgarage.png",
 
     description:
       "Optimized Google Business Profile, business information, services, reviews, and Local SEO strategy to improve Google Maps visibility.",
 
-    tech: [
-      "GBP",
-      "Local SEO",
-      "Google Maps",
-      "Reviews",
-      "SEO",
-    ],
+    tech: ["GBP", "Local SEO", "Google Maps", "Reviews", "SEO"],
 
     link: "#",
   },
@@ -46,17 +40,12 @@ export const projects = [
 
     project_name: "Auto Garage HAW",
 
-    image: "/projects/haw.webp",
+    image: "/images/garagehaw.png",
 
     description:
       "Implemented Local SEO strategy and Google Business Profile optimization for an automotive workshop.",
 
-    tech: [
-      "Google Maps",
-      "GBP",
-      "SEO",
-      "Content",
-    ],
+    tech: ["Google Maps", "GBP", "SEO", "Content"],
 
     link: "#",
   },
@@ -66,16 +55,12 @@ export const projects = [
 
     project_name: "FunnyKnockKnockJoke.com",
 
-    image: "/projects/funny.webp",
+    image: "/images/funny.webp",
 
     description:
       "Performed On-Page SEO, content optimization, metadata improvements, and keyword research to improve organic visibility.",
 
-    tech: [
-      "On-Page SEO",
-      "Content SEO",
-      "Keyword Research",
-    ],
+    tech: ["On-Page SEO", "Content SEO", "Keyword Research"],
 
     link: "https://funnyknockknockjoke.com",
   },
@@ -85,17 +70,12 @@ export const projects = [
 
     project_name: "AlRamil.ae",
 
-    image: "/projects/alramil.webp",
+    image: "/images/alramil.webp",
 
     description:
       "Website optimization, content improvements, keyword targeting, and technical SEO enhancements.",
 
-    tech: [
-      "SEO",
-      "Technical SEO",
-      "Content",
-      "Optimization",
-    ],
+    tech: ["SEO", "Technical SEO", "Content", "Optimization"],
 
     link: "https://alramil.ae",
   },
@@ -105,16 +85,12 @@ export const projects = [
 
     project_name: "Car PPF HTR",
 
-    image: "/projects/carppf.webp",
+    image: "/images/carppf.png",
 
     description:
       "Optimized Google Business Profile, services, photos, categories, and local search visibility for a detailing business.",
 
-    tech: [
-      "Google Business Profile",
-      "Local SEO",
-      "Maps Ranking",
-    ],
+    tech: ["Google Business Profile", "Local SEO", "Maps Ranking"],
 
     link: "#",
   },

@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
 
 /**
  * Header Component
@@ -15,24 +15,24 @@ export default function Header() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navItems = [
-    { label: 'About', href: '#about' },
-    { label: 'Experience', href: '#experience' },
-    { label: 'Skills', href: '#skills' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Contact', href: '#contact' },
+    { label: "About", href: "#about" },
+    { label: "Experience", href: "#experience" },
+    { label: "Skills", href: "#skills" },
+    { label: "Projects", href: "#projects" },
+    { label: "Contact", href: "#contact" },
   ];
 
   return (
     <motion.header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'glass-card backdrop-blur-xl border-b border-blue-500/20'
-          : 'bg-transparent'
+          ? "glass-card backdrop-blur-xl border-b border-blue-500/20"
+          : "bg-transparent"
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -58,7 +58,7 @@ export default function Header() {
                 key={item.label}
                 href={item.href}
                 className="text-gray-300 hover:text-white transition-colors relative group text-sm font-medium"
-                whileHover={{ color: '#ffffff' }}
+                whileHover={{ color: "#ffffff" }}
               >
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 group-hover:w-full transition-all duration-300" />
@@ -68,7 +68,7 @@ export default function Header() {
 
           {/* CTA Button */}
           <motion.a
-            href="http://wa.me/923056529811"
+            href="http://wa.me/923200141848" // Replace with your actual WhatsApp number
             className="hidden md:flex items-center gap-2 px-6 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-medium hover:shadow-lg hover:shadow-blue-500/50 transition-all"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

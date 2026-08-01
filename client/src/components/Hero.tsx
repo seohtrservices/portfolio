@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
-import { TypeAnimation } from 'react-type-animation';
-import { ArrowRight, Download } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { motion } from "framer-motion";
+import { TypeAnimation } from "react-type-animation";
+import { ArrowRight, Download } from "lucide-react";
+import { useEffect, useState } from "react";
 
 /**
  * Hero Section
@@ -15,20 +15,20 @@ export default function Hero() {
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-const techIcons = [
-  { name: 'Google Business Profile', delay: 0 },
-  { name: 'Local SEO', delay: 0.1 },
-  { name: 'Google Maps', delay: 0.2 },
-  { name: 'On-Page SEO', delay: 0.3 },
-  { name: 'Ahrefs', delay: 0.4 },
-  { name: 'SEMrush', delay: 0.5 },
-  { name: 'Google Search Console', delay: 0.6 },
-  { name: 'Google Analytics', delay: 0.7 },
-];
+  const techIcons = [
+    { name: "Google Business Profile", delay: 0 },
+    { name: "Local SEO", delay: 0.1 },
+    { name: "Google Maps", delay: 0.2 },
+    { name: "On-Page SEO", delay: 0.3 },
+    { name: "Ahrefs", delay: 0.4 },
+    { name: "SEMrush", delay: 0.5 },
+    { name: "Google Search Console", delay: 0.6 },
+    { name: "Google Analytics", delay: 0.7 },
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -70,7 +70,7 @@ const techIcons = [
           x: mousePosition.x - 192,
           y: mousePosition.y - 192,
         }}
-        transition={{ type: 'spring', damping: 30, stiffness: 200 }}
+        transition={{ type: "spring", damping: 30, stiffness: 200 }}
       />
 
       {/* Floating Particles */}
@@ -79,17 +79,17 @@ const techIcons = [
           <motion.div
             key={i}
             className="absolute w-1 h-1 bg-blue-400/50 rounded-full"
-        animate={{
-          y: [0, -100, 0],
-          x: [0, Math.sin(i) * 50, 0],
-          opacity: [0, 1, 0],
-        }}
-        transition={{
-          duration: 3 + i * 0.5,
-          repeat: Infinity,
-          delay: i * 0.1,
-          repeatType: 'loop' as const,
-        }}
+            animate={{
+              y: [0, -100, 0],
+              x: [0, Math.sin(i) * 50, 0],
+              opacity: [0, 1, 0],
+            }}
+            transition={{
+              duration: 3 + i * 0.5,
+              repeat: Infinity,
+              delay: i * 0.1,
+              repeatType: "loop" as const,
+            }}
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -124,24 +124,27 @@ const techIcons = [
         </motion.h1>
 
         {/* Typewriter Animation */}
-        <motion.div variants={itemVariants} className="text-xl md:text-2xl text-gray-300 mb-8 h-12">
+        <motion.div
+          variants={itemVariants}
+          className="text-xl md:text-2xl text-gray-300 mb-8 h-12"
+        >
           <TypeAnimation
-  sequence={[
-    'Google Business Profile Specialist',
-    2000,
-    'Local SEO Expert',
-    2000,
-    'Google Maps Ranking Specialist',
-    2000,
-    'On-Page SEO Executive',
-    2000,
-    'Automotive SEO Specialist',
-    2000,
-  ]}
-  wrapper="span"
-  cursor={true}
-  repeat={Infinity}
-/>
+            sequence={[
+              "Google Business Profile Specialist",
+              2000,
+              "Local SEO Expert",
+              2000,
+              "Google Maps Ranking Specialist",
+              2000,
+              "On-Page SEO Expert",
+              2000,
+              "Automotive SEO Specialist",
+              2000,
+            ]}
+            wrapper="span"
+            cursor={true}
+            repeat={Infinity}
+          />
         </motion.div>
 
         {/* Subtitle */}
@@ -149,9 +152,12 @@ const techIcons = [
           variants={itemVariants}
           className="text-gray-400 text-lg max-w-2xl mx-auto mb-12"
         >
-          Helping Auto Repair Shops, Car Garages, Detailing Studios, and Automotive Businesses increase their visibility on Google Maps through Google Business Profile Optimization, Local SEO, and On-Page SEO.
-
-I specialize in improving local rankings, generating qualified leads, and driving more customers from Google Search & Maps.
+          “I help Auto Repair Shops, Car Garages, Detailing Studios, and
+          Automotive Businesses increase their visibility on Google Maps through
+          Google Business Profile Optimization, Local SEO, and On-Page SEO.My
+          goal is simple: help you rank higher, generate more phone calls,
+          attract qualified local customers, and grow your revenue—without
+          relying on expensive paid advertising.”
         </motion.p>
 
         {/* CTA Buttons */}
@@ -166,7 +172,7 @@ I specialize in improving local rankings, generating qualified leads, and drivin
             whileTap={{ scale: 0.95 }}
           >
             View Case Studies
- <ArrowRight size={20} />
+            <ArrowRight size={20} />
           </motion.a>
           <motion.a
             href="http://wa.me/923035385721"
@@ -178,7 +184,8 @@ I specialize in improving local rankings, generating qualified leads, and drivin
           </motion.a>
           <motion.a
             href="../docs/Zaroon_CV.pdf"
-            download            className="px-8 py-4 border border-purple-500/50 text-white font-semibold rounded-lg hover:bg-purple-500/10 transition-all flex items-center justify-center gap-2"
+            download
+            className="px-8 py-4 border border-purple-500/50 text-white font-semibold rounded-lg hover:bg-purple-500/10 transition-all flex items-center justify-center gap-2"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -202,11 +209,11 @@ I specialize in improving local rankings, generating qualified leads, and drivin
                 duration: 3,
                 repeat: Infinity,
                 delay: tech.delay,
-                repeatType: 'loop' as const,
+                repeatType: "loop" as const,
               }}
               whileHover={{
                 scale: 1.1,
-                boxShadow: '0 0 20px rgba(59, 130, 246, 0.5)',
+                boxShadow: "0 0 20px rgba(59, 130, 246, 0.5)",
               }}
             >
               {tech.name}
@@ -219,13 +226,21 @@ I specialize in improving local rankings, generating qualified leads, and drivin
       <motion.div
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity, repeatType: 'loop' as const }}
+        transition={{
+          duration: 2,
+          repeat: Infinity,
+          repeatType: "loop" as const,
+        }}
       >
         <div className="w-6 h-10 border-2 border-blue-500/50 rounded-full flex items-start justify-center p-2">
           <motion.div
             className="w-1 h-2 bg-blue-500 rounded-full"
             animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 2, repeat: Infinity, repeatType: 'loop' as const }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              repeatType: "loop" as const,
+            }}
           />
         </div>
       </motion.div>

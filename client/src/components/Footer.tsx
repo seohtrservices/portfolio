@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import { ArrowUp } from 'lucide-react';
+import { motion } from "framer-motion";
+import { ArrowUp } from "lucide-react";
 
 /**
  * Footer Component
@@ -9,21 +9,21 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { label: 'About', href: '#about' },
-    { label: 'Experience', href: '#experience' },
-    { label: 'Skills', href: '#skills' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Contact', href: '#contact' },
+    { label: "About", href: "#about" },
+    { label: "Experience", href: "#experience" },
+    { label: "Skills", href: "#skills" },
+    { label: "Projects", href: "#projects" },
+    { label: "Contact", href: "#contact" },
   ];
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <footer className="relative bg-gradient-to-t from-black via-black/80 to-transparent pt-20 pb-8 px-4 border-t border-white/10">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -32,11 +32,14 @@ export default function Footer() {
           >
             <div className="flex items-center gap-2 mb-4">
               <span className="text-lg font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                Syed Zaroon Ali
+                Hafiz Tayyab Rafique
               </span>
             </div>
-            <p className="text-gray-400 text-sm">
-              Senior Shopify Developer & React Engineer crafting premium digital experiences.
+            <p className="text-gray-400 text-sm leading-6">
+              Local SEO Expert & Google Business Profile (GBP) Specialist
+              helping businesses rank higher on Google Maps, generate more local
+              leads, and dominate local search results through proven SEO
+              strategies.
             </p>
           </motion.div>
 
@@ -68,20 +71,57 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h3 className="text-white font-semibold mb-4">Services</h3>
+
             <ul className="space-y-2">
               <li>
-                <span className="text-gray-400 text-sm">Shopify Development</span>
+                <span className="text-gray-400 text-sm">
+                  Google Business Profile Optimization
+                </span>
               </li>
+
               <li>
-                <span className="text-gray-400 text-sm">React Applications</span>
+                <span className="text-gray-400 text-sm">
+                  Local SEO Strategy
+                </span>
               </li>
+
               <li>
-                <span className="text-gray-400 text-sm">Headless Commerce</span>
+                <span className="text-gray-400 text-sm">
+                  Google Maps Ranking
+                </span>
               </li>
+
               <li>
-                <span className="text-gray-400 text-sm">Performance Optimization</span>
+                <span className="text-gray-400 text-sm">Citation Building</span>
+              </li>
+
+              <li>
+                <span className="text-gray-400 text-sm">
+                  Reputation Management
+                </span>
+              </li>
+
+              <li>
+                <span className="text-gray-400 text-sm">
+                  Local Keyword Research
+                </span>
               </li>
             </ul>
+          </motion.div>
+
+          {/* Contact */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <h3 className="text-white font-semibold mb-4">Get In Touch</h3>
+
+            <div className="space-y-2 text-sm text-gray-400">
+              <p>Lahore, Pakistan</p>
+              <p>Available Worldwide</p>
+              <p>Email: your@email.com</p>
+            </div>
           </motion.div>
         </div>
 
@@ -96,7 +136,7 @@ export default function Footer() {
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           <p className="text-gray-500 text-sm text-center md:text-left">
-            © {currentYear} Syed Zaroon Ali Chishti. All rights reserved.
+            © {currentYear} Hafiz Tayyab Rafique. All rights reserved.
           </p>
 
           {/* Back to Top Button */}

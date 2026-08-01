@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import CountUp from 'react-countup';
-import { useInView } from 'react-intersection-observer';
+import { motion } from "framer-motion";
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
 import { stats } from "../data/state";
 
 /**
@@ -10,21 +10,20 @@ import { stats } from "../data/state";
 export default function About() {
   const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
 
-
-const skills = [
-  'Google Business Profile Optimization',
-  'Google Maps Ranking',
-  'Local SEO Strategy',
-  'On-Page SEO',
-  'Keyword Research',
-  'Competitor Analysis',
-  'Review Management',
-  'Content Optimization',
-  'Google Search Console',
-  'Ahrefs & SEMrush',
-  'Technical SEO',
-  'Automotive SEO',
-];
+  const skills = [
+    "Google Business Profile (GBP) Optimization",
+    "Local SEO",
+    "On-Page SEO",
+    "Technical SEO",
+    "Local Keyword Research",
+    "Content Optimization",
+    "Citation Building & Management",
+    "NAP Consistency Management",
+    "Google Maps Ranking",
+    "Local Link Building",
+    "SEO Audit",
+    "Competitor Analysis",
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -56,7 +55,7 @@ const skills = [
           className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
           variants={containerVariants}
           initial="hidden"
-          animate={inView ? 'visible' : 'hidden'}
+          animate={inView ? "visible" : "hidden"}
         >
           {/* Left: Image */}
           <motion.div variants={itemVariants} className="relative">
@@ -73,9 +72,15 @@ const skills = [
             <motion.div
               className="absolute -bottom-4 -right-4 glass-card px-6 py-3 rounded-xl"
               animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 3, repeat: Infinity, repeatType: 'loop' as const }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                repeatType: "loop" as const,
+              }}
             >
-              <p className="text-sm font-semibold text-cyan-400">GBP Specialist</p>
+              <p className="text-sm font-semibold text-cyan-400">
+                GBP Specialist
+              </p>
             </motion.div>
           </motion.div>
 
@@ -83,17 +88,32 @@ const skills = [
           <motion.div variants={containerVariants} className="space-y-8">
             <motion.div variants={itemVariants}>
               <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                About <span className="text-transparent bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text">Me</span>
+                About{" "}
+                <span className="text-transparent bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text">
+                  Me
+                </span>
               </h2>
               <p className="text-gray-400 text-lg leading-relaxed">
-                I'm Faizan Tayyab, a Local SEO Specialist and Google Business Profile (GBP) Manager with hands-on experience helping automotive businesses improve their visibility on Google Search and Google Maps.
-
-I specialize in Google Business Profile Optimization, Local SEO, On-Page SEO, keyword research, and content optimization. My focus is helping auto repair shops, mechanics, car detailing studios, and automotive brands generate more local leads, phone calls, and customers through organic search.
+                I'm Hafiz Tayyab Rafique, a Local SEO Specialist and Google
+                Business Profile (GBP) Manager dedicated to helping automotive
+                businesses turn Google into their most powerful source of new
+                customers.I work with auto repair shops, mechanics, car
+                detailing studios, and automotive businesses to improve their
+                visibility on Google Search and Google Maps using proven Google
+                Business Profile Optimization, Local SEO, On-Page SEO, keyword
+                research, and content optimization strategies.My mission is
+                simple: help local businesses rank higher, generate more
+                qualified leads, increase phone calls, and convert more local
+                searches into paying customers without relying on expensive
+                advertising.
               </p>
             </motion.div>
 
             {/* Skills Grid */}
-            <motion.div variants={itemVariants} className="grid grid-cols-2 gap-3">
+            <motion.div
+              variants={itemVariants}
+              className="grid grid-cols-2 gap-3"
+            >
               {skills.map((skill, i) => (
                 <div
                   key={i}
@@ -103,26 +123,32 @@ I specialize in Google Business Profile Optimization, Local SEO, On-Page SEO, ke
                 </div>
               ))}
             </motion.div>
-
-            {/* Stats */}
-            <motion.div variants={itemVariants} className="grid grid-cols-2 gap-4 pt-4">
-              {stats.map((stat, i) => (
-                <div key={i} className="glass-card p-4 rounded-lg text-center">
-                  <div className="text-3xl font-bold text-transparent bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text mb-1">
-                    {inView ? (
-                      <>
-                        <CountUp end={stat.value} duration={2} decimals={stat.value % 1 !== 0 ? 1 : 0} />
-                        {'+'}
-                      </>
-                    ) : (
-                      '0'
-                    )}
-                  </div>
-                  <p className="text-xs text-gray-400">{stat.label}</p>
-                </div>
-              ))}
-            </motion.div>
           </motion.div>
+        </motion.div>
+        {/* Stats */}
+        <motion.div
+          variants={itemVariants}
+          className="grid grid-cols-4 gap-4 pt-8"
+        >
+          {stats.map((stat, i) => (
+            <div key={i} className="glass-card p-8 rounded-lg text-center">
+              <div className="text-3xl font-bold text-transparent bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text mb-1">
+                {inView ? (
+                  <>
+                    <CountUp
+                      end={stat.value}
+                      duration={2}
+                      decimals={stat.value % 1 !== 0 ? 1 : 0}
+                    />
+                    {"+"}
+                  </>
+                ) : (
+                  "0"
+                )}
+              </div>
+              <p className="text-xs text-gray-400">{stat.label}</p>
+            </div>
+          ))}
         </motion.div>
       </div>
     </section>
