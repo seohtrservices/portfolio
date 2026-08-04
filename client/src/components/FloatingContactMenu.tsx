@@ -1,8 +1,27 @@
-import { AnimatePresence, motion } from 'framer-motion';
-import { Github, Linkedin, MessageCircleMore, MessageCircle, X } from 'lucide-react';
-import { useState } from 'react';
+import { AnimatePresence, motion } from "framer-motion";
+import {
+  MessageCircleMore,
+  MessageCircle,
+  X,
+  Linkedin,
+  Twitter,
+} from "lucide-react";
 
-function FiverrIcon({ size = 18, className = '' }: { size?: number; className?: string }) {
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaYoutube,
+  FaPinterestP,
+} from "react-icons/fa";
+
+import { useState } from "react";
+function FiverrIcon({
+  size = 18,
+  className = "",
+}: {
+  size?: number;
+  className?: string;
+}) {
   return (
     <svg
       width={size}
@@ -29,32 +48,53 @@ export default function FloatingContactMenu() {
 
   const contactOptions = [
     {
-      label: 'WhatsApp',
-      link: 'https://wa.me/923056529811',
+      label: "WhatsApp",
+      link: "https://wa.me/923200141848",
       icon: MessageCircle,
-      color: 'text-green-400',
-      glow: 'hover:border-green-400/50 hover:shadow-green-500/20',
+      color: "text-green-400",
+      glow: "hover:border-green-400/50 hover:shadow-green-500/20",
     },
     {
-      label: 'Fiverr',
-      link: 'https://www.fiverr.com/zaroonchishti/',
-      icon: FiverrIcon,
-      color: 'text-emerald-400',
-      glow: 'hover:border-emerald-400/50 hover:shadow-emerald-500/20',
-    },
-    {
-      label: 'GitHub',
-      link: 'https://github.com/SyedZaroon',
-      icon: Github,
-      color: 'text-gray-300',
-      glow: 'hover:border-gray-300/50 hover:shadow-gray-500/20',
-    },
-    {
-      label: 'LinkedIn',
-      link: 'https://www.linkedin.com/in/zaroon-ali/',
+      label: "LinkedIn",
+      link: "https://www.linkedin.com/in/htr-seo-services-5b2964422/",
       icon: Linkedin,
-      color: 'text-blue-400',
-      glow: 'hover:border-blue-400/50 hover:shadow-blue-500/20',
+      color: "text-blue-500",
+      glow: "hover:border-blue-500/50 hover:shadow-blue-500/20",
+    },
+    {
+      label: "X (Twitter)",
+      link: "https://x.com/htrseoservice",
+      icon: Twitter,
+      color: "text-white",
+      glow: "hover:border-white/50 hover:shadow-white/20",
+    },
+    {
+      label: "Facebook",
+      link: "https://www.facebook.com/htrseoservices",
+      icon: FaFacebookF,
+      color: "text-blue-600",
+      glow: "hover:border-blue-600/50 hover:shadow-blue-600/20",
+    },
+    {
+      label: "Instagram",
+      link: "https://www.instagram.com/htrseoservices/",
+      icon: FaInstagram,
+      color: "text-pink-500",
+      glow: "hover:border-pink-500/50 hover:shadow-pink-500/20",
+    },
+    {
+      label: "YouTube",
+      link: "https://www.youtube.com/@htrseoservices",
+      icon: FaYoutube,
+      color: "text-red-500",
+      glow: "hover:border-red-500/50 hover:shadow-red-500/20",
+    },
+    {
+      label: "Pinterest",
+      link: "https://www.pinterest.com/htrseoservices/",
+      icon: FaPinterestP,
+      color: "text-red-600",
+      glow: "hover:border-red-600/50 hover:shadow-red-600/20",
     },
   ];
 
@@ -121,9 +161,7 @@ export default function FloatingContactMenu() {
             exit={{ rotate: 0, opacity: 0.7 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
           >
-            {isOpen ?
-              <X size={24} />
-            : <MessageCircleMore size={24} />}
+            {isOpen ? <X size={24} /> : <MessageCircleMore size={24} />}
           </motion.span>
         </motion.button>
       </div>
