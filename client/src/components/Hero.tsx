@@ -175,7 +175,7 @@ export default function Hero() {
             <ArrowRight size={20} />
           </motion.a>
           <motion.a
-            href="http://wa.me/923035385721"
+            href="http://wa.me/923200141848"
             className="px-8 py-4 border border-blue-500/50 text-white font-semibold rounded-lg hover:bg-blue-500/10 transition-all"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -183,7 +183,7 @@ export default function Hero() {
             Book Free GBP Audit
           </motion.a>
           <motion.a
-            href="../docs/Zaroon_CV.pdf"
+            href="../docs/HTR_CV.pdf"
             download
             className="px-8 py-4 border border-purple-500/50 text-white font-semibold rounded-lg hover:bg-purple-500/10 transition-all flex items-center justify-center gap-2"
             whileHover={{ scale: 1.05 }}
